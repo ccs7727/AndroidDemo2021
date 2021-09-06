@@ -68,8 +68,7 @@ public class EasyTipDragView extends RelativeLayout implements AbsTipAdapter.Dra
             @Override
             public void firstDragStartCallback() {
                 //第一次开始拖动item触发回调
-//                editTv.setVisibility(View.GONE);
-//                completeTv.setVisibility(View.VISIBLE);
+                open();
             }
         });
         addTipAdapter = new AddTipAdapter();

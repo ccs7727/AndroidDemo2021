@@ -64,7 +64,9 @@ public class DragTipAdapter extends AbsTipAdapter implements View.OnLongClickLis
     @Override
     public boolean onLongClick(View v) {
         //开启编辑模式
-//        startEdittingStatus(v);
+        if (isEditing) {
+            startEdittingStatus(v);
+        }
         return true;
     }
 
@@ -106,9 +108,9 @@ public class DragTipAdapter extends AbsTipAdapter implements View.OnLongClickLis
     public void startEdittingStatus(View v) {
         if (!isEditing) {
             isEditing = true;
-//            if (callback != null) {
-//                callback.firstDragStartCallback();
-//            }
+            if (callback != null) {
+                callback.firstDragStartCallback();
+            }
             notifyDataSetChanged();
         }
         v.startDrag(EMPTY_CLIP_DATA, new MyDragShadowBuilder(),
