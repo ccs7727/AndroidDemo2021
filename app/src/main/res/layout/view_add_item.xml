@@ -1,15 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:background="@drawable/tag_add_bg"
-    android:orientation="vertical">
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/tagview_icon"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/menu_sign"
+        android:visibility="visible" />
+
+    <ImageView
+        android:id="@+id/tagview_delete"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:layout_alignParentEnd="true"
+        android:src="@drawable/ic_add"
+        android:visibility="gone" />
 
     <TextView
         android:id="@+id/tagview_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_below="@id/tagview_icon"
         android:layout_centerInParent="true"
+        android:layout_centerHorizontal="true"
         android:layout_margin="8dp"
         android:textColor="@android:color/primary_text_light"
         android:textSize="16sp" />
