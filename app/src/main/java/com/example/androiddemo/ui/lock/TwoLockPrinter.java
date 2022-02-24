@@ -1,4 +1,4 @@
-package com.example.androiddemo.utils;
+package com.example.androiddemo.ui.lock;
 
 /**
  * 基于两个lock实现连续打印abcabc....
