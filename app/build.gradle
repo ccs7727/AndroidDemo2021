@@ -14,6 +14,21 @@ android {
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
+    signingConfigs {
+        debug {
+            storeFile file('..\\key\\keystore.jks')
+            storePassword 'telit123'
+            keyAlias = 'shengjinhu'
+            keyPassword 'telit123'
+        }
+        release {
+            storeFile file('..\\key\\keystore.jks')
+            storePassword 'telit123'
+            keyAlias = 'shengjinhu'
+            keyPassword 'telit123'
+        }
+    }
+
     buildTypes {
         release {
             minifyEnabled false

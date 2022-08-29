@@ -22,6 +22,8 @@
         <activity android:name=".ui.zxing.QrCodeActivity" />
         <activity android:name=".ui.drag.DragActivity" />
         <activity android:name=".ui.multilist.MultiListActivity" />
+        <activity android:name=".ui.permission.PermisstionActivity" />
+        <activity android:name=".ui.skeleton.SkeletonActivity" />
     </application>
 
 </manifest>

@@ -7,6 +7,8 @@ import android.widget.ArrayAdapter;
 
 import com.example.androiddemo.ui.drag.DragActivity;
 import com.example.androiddemo.ui.multilist.MultiListActivity;
+import com.example.androiddemo.ui.permission.PermisstionActivity;
+import com.example.androiddemo.ui.skeleton.SkeletonActivity;
 import com.example.androiddemo.ui.zxing.QrCodeActivity;
 
 public class MainActivity extends LauncherActivity {
@@ -15,6 +17,8 @@ public class MainActivity extends LauncherActivity {
             QrCodeActivity.class
             , DragActivity.class
             , MultiListActivity.class
+            , PermisstionActivity.class
+            , SkeletonActivity.class
     };
 
     @Override
@@ -24,6 +28,8 @@ public class MainActivity extends LauncherActivity {
                 "扫描二维码"
                 , "拖动调整应用位置与排序"
                 , "多级列表"
+                , "权限设置"
+                , "骨架加载"
         };
 
         setListAdapter(new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, names));
