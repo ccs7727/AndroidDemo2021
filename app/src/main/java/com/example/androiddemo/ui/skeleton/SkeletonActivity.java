@@ -1,52 +1,45 @@
 
 package com.example.androiddemo.ui.skeleton;
 
+import android.app.LauncherActivity;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
+import android.widget.ArrayAdapter;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.androiddemo.R;
+import com.example.androiddemo.ui.drag.DragActivity;
+import com.example.androiddemo.ui.multilist.MultiListActivity;
+import com.example.androiddemo.ui.permission.PermisstionActivity;
 import com.example.androiddemo.ui.permission.util.permissionsetting.PermSetting;
+import com.example.androiddemo.ui.zxing.QrCodeActivity;
 
 /**
  * 骨架加载
  */
-public class SkeletonActivity extends AppCompatActivity {
+public class SkeletonActivity extends LauncherActivity {
 
-    private int REQUEST_CODE = 100;
-
-    private int launchMode = -1;
+    private Class<?>[] clazz = {
+            Skeleton1Activity.class
+            ,
+    };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_permission);
-        findViewById(R.id.btn_go).setOnClickListener(v ->
-                launchMode = PermSetting.gotoPermSetting(SkeletonActivity.this, REQUEST_CODE));
+        String names[] = {
+                "方案一"
+                ,
+        };
+
+        setListAdapter(new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, names));
     }
 
     @Override
-    protected void onResume() {
-        if (launchMode == ActivityInfo.LAUNCH_SINGLE_TASK || launchMode == ActivityInfo.LAUNCH_SINGLE_INSTANCE) {
-            //LAUNCH_SINGLE_TASK,LAUNCH_SINGLE_INSTANCE这两种情况下onResume才是真正的从设置页面返回
-            // TODO: 再次判断权限
-            Toast.makeText(SkeletonActivity.this, "从权限设置页面返回 launchMode = " + launchMode, Toast.LENGTH_SHORT).show();
-            launchMode = -1;
-        }
-        super.onResume();
-    }
-
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        //LAUNCH_SINGLE_TASK,LAUNCH_SINGLE_INSTANCE情况下还没有从设置页面回来就会回调onActivityResult，不适合做后续动作，如再次判断权限
-        if (REQUEST_CODE == requestCode && launchMode != ActivityInfo.LAUNCH_SINGLE_TASK && launchMode != ActivityInfo.LAUNCH_SINGLE_INSTANCE) {
-            Toast.makeText(SkeletonActivity.this, "从权限设置页面返回 launchMode = " + launchMode, Toast.LENGTH_SHORT).show();
-            // TODO: 再次判断权限
-            launchMode = -1;
-        }
-        super.onActivityResult(requestCode, resultCode, data);
+    protected Intent intentForPosition(int position) {
+        return new Intent(this, clazz[position]);
     }
 }

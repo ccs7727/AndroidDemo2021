@@ -1,0 +1,19 @@
+pwd:telit123
+Alias:Telit
+
+别名: telit
+创建日期: 2021-8-31
+条目类型: PrivateKeyEntry
+证书链长度: 1
+证书[1]:
+所有者: CN=Telit, L=HeFei, ST=AnHui
+发布者: CN=Telit, L=HeFei, ST=AnHui
+序列号: 5b9a6248
+有效期为 Tue Aug 31 08:47:30 CST 2021 至 Sat Aug 25 08:47:30 CST 2046
+证书指纹:
+         MD5:  2A:26:2D:F5:D0:3D:D2:70:73:87:89:A4:E9:48:06:AD
+         SHA1: 5F:A8:6F:61:C3:27:6D:F3:B0:9F:9A:68:4D:29:46:EE:84:87:75:E4
+         SHA256: 6D:A6:17:B9:46:B9:25:4F:EF:15:94:FC:62:16:A3:E4:A6:B8:FA:0A:0C:8D:62:20:43:62:96:07:AC:7C:E1:0D
+签名算法名称: SHA256withRSA
+主体公共密钥算法: 2048 位 RSA 密钥
+版本: 3

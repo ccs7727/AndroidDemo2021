@@ -8,7 +8,7 @@ import android.widget.ArrayAdapter;
 import com.example.androiddemo.ui.drag.DragActivity;
 import com.example.androiddemo.ui.multilist.MultiListActivity;
 import com.example.androiddemo.ui.permission.PermisstionActivity;
-import com.example.androiddemo.ui.skeleton.SkeletonActivity;
+import com.example.androiddemo.ui.skeleton.Skeleton1Activity;
 import com.example.androiddemo.ui.zxing.QrCodeActivity;
 
 public class MainActivity extends LauncherActivity {
@@ -18,7 +18,7 @@ public class MainActivity extends LauncherActivity {
             , DragActivity.class
             , MultiListActivity.class
             , PermisstionActivity.class
-            , SkeletonActivity.class
+            , Skeleton1Activity.class
     };
 
     @Override

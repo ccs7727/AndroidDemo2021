@@ -18,13 +18,13 @@ android {
         debug {
             storeFile file('..\\key\\keystore.jks')
             storePassword 'telit123'
-            keyAlias = 'shengjinhu'
+            keyAlias = 'telit'
             keyPassword 'telit123'
         }
         release {
             storeFile file('..\\key\\keystore.jks')
             storePassword 'telit123'
-            keyAlias = 'shengjinhu'
+            keyAlias = 'telit'
             keyPassword 'telit123'
         }
     }
@@ -52,4 +52,7 @@ dependencies {
 
     //扫描二维码
     implementation 'cn.bertsir.zbarLibary:zbarlibary:latest.release'
+    //骨架加载
+    implementation 'com.ethanhua:skeleton:1.1.2'
+    implementation 'io.supercharge:shimmerlayout:2.1.0'
 }

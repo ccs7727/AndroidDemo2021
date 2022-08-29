@@ -6,4 +6,5 @@
     <string name="navigation_drawer_close">关闭描述</string>
     <string name="back_text">返回</string>
     <string name="load_more_footer_hint_normal">查看更多</string>
+    <string name="fast_furious"><![CDATA[Fast & Furious]]></string>
 </resources>

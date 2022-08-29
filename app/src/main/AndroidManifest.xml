@@ -23,7 +23,11 @@
         <activity android:name=".ui.drag.DragActivity" />
         <activity android:name=".ui.multilist.MultiListActivity" />
         <activity android:name=".ui.permission.PermisstionActivity" />
-        <activity android:name=".ui.skeleton.SkeletonActivity" />
+        <activity android:name=".ui.skeleton.Skeleton1Activity" />
+        <activity android:name=".ui.skeleton.Skeleton1ListActivity" />
+        <activity
+            android:name=".ui.skeleton.Skeleton1ViewActivity"
+            android:hardwareAccelerated="false" />
     </application>
 
 </manifest>
