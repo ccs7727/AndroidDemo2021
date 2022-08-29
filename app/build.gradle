@@ -55,4 +55,7 @@ dependencies {
     //骨架加载
     implementation 'com.ethanhua:skeleton:1.1.2'
     implementation 'io.supercharge:shimmerlayout:2.1.0'
+    //骨架加载
+    implementation 'com.github.rasoulmiri:Skeleton:1.1.6'
+
 }

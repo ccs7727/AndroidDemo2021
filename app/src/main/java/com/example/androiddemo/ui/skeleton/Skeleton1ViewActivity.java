@@ -1,7 +1,5 @@
 package com.example.androiddemo.ui.skeleton;
 
-import android.content.Context;
-import android.content.Intent;
 import android.os.Bundle;
 import android.os.Message;
 import android.view.View;
@@ -19,17 +17,7 @@ import java.lang.ref.WeakReference;
 
 public class Skeleton1ViewActivity extends AppCompatActivity {
 
-
-    private static final String PARAMS_TYPE = "params_type";
-    public static final String TYPE_IMG_LOADING = "type_img";
-    public static final String TYPE_VIEW = "type_view";
     private SkeletonScreen skeletonScreen;
-
-    public static void start(Context context, String type) {
-        Intent intent = new Intent(context, Skeleton1ViewActivity.class);
-        intent.putExtra(PARAMS_TYPE, type);
-        context.startActivity(intent);
-    }
 
     public static class MyHandler extends android.os.Handler {
         private final WeakReference<Skeleton1ViewActivity> activityWeakReference;
@@ -51,21 +39,18 @@ public class Skeleton1ViewActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_view);
-        String mType = getIntent().getStringExtra(PARAMS_TYPE);
         View rootView = findViewById(R.id.rootView);
         RecyclerView recyclerView = (RecyclerView) findViewById(R.id.recyclerView);
         NewsAdapter adapter = new NewsAdapter();
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false);
         recyclerView.setLayoutManager(linearLayoutManager);
         recyclerView.setAdapter(adapter);
-        if (TYPE_VIEW.equals(mType)) {
-            skeletonScreen = Skeleton.bind(rootView)
-                    .load(R.layout.activity_view_skeleton)
-                    .duration(1000)
-                    .color(R.color.shimmer_color)
-                    .angle(0)
-                    .show();
-        }
+        skeletonScreen = Skeleton.bind(rootView)
+                .load(R.layout.activity_view_skeleton)
+                .duration(1000)
+                .color(R.color.shimmer_color)
+                .angle(0)
+                .show();
         MyHandler myHandler = new MyHandler(this);
         myHandler.sendEmptyMessageDelayed(1, 3000);
     }

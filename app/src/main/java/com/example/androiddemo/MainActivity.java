@@ -9,6 +9,7 @@ import com.example.androiddemo.ui.drag.DragActivity;
 import com.example.androiddemo.ui.multilist.MultiListActivity;
 import com.example.androiddemo.ui.permission.PermisstionActivity;
 import com.example.androiddemo.ui.skeleton.Skeleton1Activity;
+import com.example.androiddemo.ui.skeleton.gradientXml.Skeleton2Activity;
 import com.example.androiddemo.ui.zxing.QrCodeActivity;
 
 public class MainActivity extends LauncherActivity {
@@ -19,6 +20,7 @@ public class MainActivity extends LauncherActivity {
             , MultiListActivity.class
             , PermisstionActivity.class
             , Skeleton1Activity.class
+            , Skeleton2Activity.class
     };
 
     @Override
@@ -29,7 +31,8 @@ public class MainActivity extends LauncherActivity {
                 , "拖动调整应用位置与排序"
                 , "多级列表"
                 , "权限设置"
-                , "骨架加载"
+                , "骨架加载方案一"
+                , "骨架加载方案二"
         };
 
         setListAdapter(new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, names));

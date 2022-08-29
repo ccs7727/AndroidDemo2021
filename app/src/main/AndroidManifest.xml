@@ -23,11 +23,16 @@
         <activity android:name=".ui.drag.DragActivity" />
         <activity android:name=".ui.multilist.MultiListActivity" />
         <activity android:name=".ui.permission.PermisstionActivity" />
+        <!-- 骨架屏方案一 -->
         <activity android:name=".ui.skeleton.Skeleton1Activity" />
         <activity android:name=".ui.skeleton.Skeleton1ListActivity" />
         <activity
             android:name=".ui.skeleton.Skeleton1ViewActivity"
             android:hardwareAccelerated="false" />
+        <!-- 骨架屏方案二 -->
+        <activity android:name=".ui.skeleton.gradientXml.Skeleton2Activity" />
+        <activity android:name=".ui.skeleton.gradientXml.Skeleton2ListActivity" />
+        <activity android:name=".ui.skeleton.gradientXml.Skeleton2ViewActivity" />
     </application>
 
 </manifest>
