@@ -1,4 +1,4 @@
-package com.example.androiddemo.ui.skeleton.adapter;
+package com.example.androiddemo.ui.skeleton.skeleton1.adapter;
 
 import android.util.SparseArray;
 import android.view.View;

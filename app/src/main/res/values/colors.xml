@@ -8,10 +8,10 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
 
-    <color name="app_color">#353B3B</color>
+    <color name="app_color">#008577</color>
     <color name="colorPrimary">#008577</color>
     <color name="colorPrimaryDark">#00574B</color>
-    <color name="colorAccent">#D81B60</color>
+    <color name="colorAccent">#008577</color>
     <color name="color_12000000">#12000000</color>
     <color name="transparent">#00000000</color>
     <color name="chat_common_white">#FFFFFFFF</color>
@@ -35,4 +35,8 @@
     <color name="textColorPrimary">#444444</color>
     <color name="textColorSecondary">#969494</color>
     <color name="dividerColor">#EAEAEA</color>
+
+    <color name="shimmerBase0">#c2c2c2</color>
+    <color name="shimmerHighlight0">#ffffff</color>
+    <!--骨架加载-->
 </resources>

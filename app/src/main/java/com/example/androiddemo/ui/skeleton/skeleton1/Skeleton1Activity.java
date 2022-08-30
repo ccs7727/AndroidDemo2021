@@ -1,4 +1,4 @@
-package com.example.androiddemo.ui.skeleton;
+package com.example.androiddemo.ui.skeleton.skeleton1;
 
 import android.content.Intent;
 import android.os.Bundle;

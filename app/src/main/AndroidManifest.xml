@@ -8,7 +8,7 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.AndroidDemo">
+        android:theme="@style/AppTheme">
         <activity
             android:name=".MainActivity"
             android:exported="true">
@@ -24,15 +24,18 @@
         <activity android:name=".ui.multilist.MultiListActivity" />
         <activity android:name=".ui.permission.PermisstionActivity" />
         <!-- 骨架屏方案一 -->
-        <activity android:name=".ui.skeleton.Skeleton1Activity" />
-        <activity android:name=".ui.skeleton.Skeleton1ListActivity" />
+        <activity android:name=".ui.skeleton.skeleton1.Skeleton1Activity" />
+        <activity android:name=".ui.skeleton.skeleton1.Skeleton1ListActivity" />
         <activity
-            android:name=".ui.skeleton.Skeleton1ViewActivity"
+            android:name=".ui.skeleton.skeleton1.Skeleton1ViewActivity"
             android:hardwareAccelerated="false" />
         <!-- 骨架屏方案二 -->
-        <activity android:name=".ui.skeleton.gradientXml.Skeleton2Activity" />
-        <activity android:name=".ui.skeleton.gradientXml.Skeleton2ListActivity" />
-        <activity android:name=".ui.skeleton.gradientXml.Skeleton2ViewActivity" />
+        <activity android:name=".ui.skeleton.skeleton2.Skeleton2Activity" />
+        <activity android:name=".ui.skeleton.skeleton2.Skeleton2ListActivity" />
+        <activity android:name=".ui.skeleton.skeleton2.Skeleton2ViewActivity" />
+        <activity android:name=".ui.skeleton.skeleton3.Skeleton3ListActivity" />
+        <activity android:name=".ui.skeleton.skeleton3.Skeleton3ViewActivity"
+            android:theme="@style/DetailTheme"/>
     </application>
 
 </manifest>

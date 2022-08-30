@@ -1,4 +1,4 @@
-package com.example.androiddemo.ui.skeleton;
+package com.example.androiddemo.ui.skeleton.skeleton1;
 
 import android.os.Bundle;
 import android.os.Message;
@@ -11,7 +11,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.ethanhua.skeleton.Skeleton;
 import com.ethanhua.skeleton.SkeletonScreen;
 import com.example.androiddemo.R;
-import com.example.androiddemo.ui.skeleton.adapter.NewsAdapter;
+import com.example.androiddemo.ui.skeleton.skeleton1.adapter.NewsAdapter;
 
 import java.lang.ref.WeakReference;
 

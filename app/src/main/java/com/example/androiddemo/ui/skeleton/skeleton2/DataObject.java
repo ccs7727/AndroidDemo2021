@@ -1,4 +1,4 @@
-package com.example.androiddemo.ui.skeleton.gradientXml;
+package com.example.androiddemo.ui.skeleton.skeleton2;
 
 /**
  * Created by Rasoul Miri on 8/23/17.

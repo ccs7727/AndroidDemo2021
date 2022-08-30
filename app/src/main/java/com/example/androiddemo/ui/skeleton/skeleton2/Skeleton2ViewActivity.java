@@ -1,4 +1,4 @@
-package com.example.androiddemo.ui.skeleton.gradientXml;
+package com.example.androiddemo.ui.skeleton.skeleton2;
 
 import android.os.Bundle;
 import android.widget.TextView;

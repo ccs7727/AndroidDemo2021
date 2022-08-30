@@ -1,21 +1,10 @@
 
-package com.example.androiddemo.ui.skeleton;
+package com.example.androiddemo.ui.skeleton.skeleton1;
 
 import android.app.LauncherActivity;
 import android.content.Intent;
-import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.widget.ArrayAdapter;
-import android.widget.Toast;
-
-import androidx.appcompat.app.AppCompatActivity;
-
-import com.example.androiddemo.R;
-import com.example.androiddemo.ui.drag.DragActivity;
-import com.example.androiddemo.ui.multilist.MultiListActivity;
-import com.example.androiddemo.ui.permission.PermisstionActivity;
-import com.example.androiddemo.ui.permission.util.permissionsetting.PermSetting;
-import com.example.androiddemo.ui.zxing.QrCodeActivity;
 
 /**
  * 骨架加载

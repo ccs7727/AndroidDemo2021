@@ -1,4 +1,4 @@
-package com.example.androiddemo.ui.skeleton.gradientXml;
+package com.example.androiddemo.ui.skeleton.skeleton2;
 
 import android.content.Context;
 import android.view.LayoutInflater;

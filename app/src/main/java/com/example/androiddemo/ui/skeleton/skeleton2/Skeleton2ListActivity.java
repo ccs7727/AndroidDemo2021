@@ -1,11 +1,8 @@
-package com.example.androiddemo.ui.skeleton.gradientXml;
+package com.example.androiddemo.ui.skeleton.skeleton2;
 
 import android.os.Bundle;
-import android.os.Handler;
-import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 

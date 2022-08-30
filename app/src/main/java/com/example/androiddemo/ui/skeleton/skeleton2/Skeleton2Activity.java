@@ -1,4 +1,4 @@
-package com.example.androiddemo.ui.skeleton.gradientXml;
+package com.example.androiddemo.ui.skeleton.skeleton2;
 
 import android.content.Intent;
 import android.os.Bundle;

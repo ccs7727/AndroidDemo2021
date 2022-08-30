@@ -1,4 +1,4 @@
-package com.example.androiddemo.ui.skeleton;
+package com.example.androiddemo.ui.skeleton.skeleton1;
 
 import android.os.Bundle;
 
@@ -10,7 +10,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.ethanhua.skeleton.Skeleton;
 import com.ethanhua.skeleton.SkeletonScreen;
 import com.example.androiddemo.R;
-import com.example.androiddemo.ui.skeleton.adapter.NewsAdapter;
+import com.example.androiddemo.ui.skeleton.skeleton1.adapter.NewsAdapter;
 
 /**
  * Created by ethanhua on 2017/7/27.
