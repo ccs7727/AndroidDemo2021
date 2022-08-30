@@ -33,9 +33,16 @@
         <activity android:name=".ui.skeleton.skeleton2.Skeleton2Activity" />
         <activity android:name=".ui.skeleton.skeleton2.Skeleton2ListActivity" />
         <activity android:name=".ui.skeleton.skeleton2.Skeleton2ViewActivity" />
+        <!-- 骨架屏方案三 -->
+        <activity android:name=".ui.skeleton.skeleton3.Skeleton3Activity" />
         <activity android:name=".ui.skeleton.skeleton3.Skeleton3ListActivity" />
-        <activity android:name=".ui.skeleton.skeleton3.Skeleton3ViewActivity"
-            android:theme="@style/DetailTheme"/>
+        <activity
+            android:name=".ui.skeleton.skeleton3.Skeleton3ViewActivity"
+            android:theme="@style/DetailTheme" />
+        <!-- 骨架屏方案四 -->
+        <activity android:name=".ui.skeleton.skeleton4.Skeleton4Activity" />
+        <activity android:name=".ui.skeleton.skeleton4.Skeleton4ListActivity" />
+        <activity android:name=".ui.skeleton.skeleton4.Skeleton4ViewActivity" />
     </application>
 
 </manifest>

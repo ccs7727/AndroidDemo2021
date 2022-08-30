@@ -24,7 +24,7 @@
     <color name="gray_item">#FFECECEC</color>
     <color name="gray_item_press">#dad8d8</color>
     <color name="gray_light">#f3f3f3</color>
-    <!--骨架加载-->
+    <!--骨架加载 start-->
     <color name="colorLine">#dfdfdf</color>
     <color name="shimmer_color_for_image">#55efefef</color>
     <color name="colorFontGreyDark">#333333</color>
@@ -36,7 +36,7 @@
     <color name="textColorSecondary">#969494</color>
     <color name="dividerColor">#EAEAEA</color>
 
-    <color name="shimmerBase0">#c2c2c2</color>
+    <color name="shimmerBase0">#F4F4F4</color>
     <color name="shimmerHighlight0">#ffffff</color>
-    <!--骨架加载-->
+    <!--骨架加载 end-->
 </resources>
