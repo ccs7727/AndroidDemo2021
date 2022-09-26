@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.widget.ArrayAdapter;
 
+import com.example.androiddemo.ui.date.DateStyleActivity;
 import com.example.androiddemo.ui.drag.DragActivity;
 import com.example.androiddemo.ui.multilist.MultiListActivity;
 import com.example.androiddemo.ui.permission.PermisstionActivity;
@@ -25,6 +26,7 @@ public class MainActivity extends LauncherActivity {
             , Skeleton2Activity.class
             , Skeleton3Activity.class
             , Skeleton4Activity.class
+            , DateStyleActivity.class
     };
 
     @Override
@@ -39,6 +41,7 @@ public class MainActivity extends LauncherActivity {
                 , "骨架加载方案二"
                 , "骨架加载方案三"
                 , "骨架加载方案四"
+                , "自定义日期样式"
         };
 
         setListAdapter(new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, names));
