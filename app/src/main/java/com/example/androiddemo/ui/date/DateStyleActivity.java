@@ -1,22 +1,28 @@
 package com.example.androiddemo.ui.date;
 
-import android.content.Intent;
 import android.os.Bundle;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.androiddemo.R;
-import com.example.androiddemo.ui.skeleton.skeleton4.Skeleton4ListActivity;
-import com.example.androiddemo.ui.skeleton.skeleton4.Skeleton4ViewActivity2;
+import com.example.androiddemo.ui.date.widget.DateStyleView;
 
 public class DateStyleActivity extends AppCompatActivity {
+
+    DateStyleView datePicker2;
+    TextView tvDate;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_date_style);
-        findViewById(R.id.btn_list).setOnClickListener(view -> startActivity(new Intent(this, Skeleton4ListActivity.class)));
-//        findViewById(R.id.btn_view).setOnClickListener(view -> startActivity(new Intent(this, Skeleton4ViewActivity.class)));
-        findViewById(R.id.btn_view).setOnClickListener(view -> startActivity(new Intent(this, Skeleton4ViewActivity2.class)));
+        datePicker2 = findViewById(R.id.datePicker2);
+        tvDate = findViewById(R.id.tvDate);
+
+        //点击上月下月监听器
+        datePicker2.setOnLastClickListener((year, month) -> tvDate.setText(year + "-" + month));
+        datePicker2.initCalendar();
     }
+
 }

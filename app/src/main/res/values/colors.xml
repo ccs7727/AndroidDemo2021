@@ -39,4 +39,11 @@
     <color name="shimmerBase0">#F4F4F4</color>
     <color name="shimmerHighlight0">#ffffff</color>
     <!--骨架加载 end-->
+    <!--周-字体颜色-->
+    <color name="sign_blue">#66000000</color>
+    <!--月份/年-字体颜色-->
+    <color name="sign_green">#000000</color>
+    <!--周-背景色-->
+    <color name="sign_white">#FFFFFF</color>
+    <color name="sign_week_bg_color"> #F5F7F6</color>
 </resources>
