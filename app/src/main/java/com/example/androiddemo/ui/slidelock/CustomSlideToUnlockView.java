@@ -38,7 +38,6 @@ public class CustomSlideToUnlockView extends RelativeLayout {
     private ImageView iv_slide;//滑块
     private TextView tv_hint;//提示文本
     private RelativeLayout rl_slide;//滑动view
-    private RelativeLayout rl_root;//父容器
     private boolean mIsUnLocked;//已经滑到最右边,将不再响应touch事件
     private CallBack mCallBack;//回调
 
@@ -99,10 +98,8 @@ public class CustomSlideToUnlockView extends RelativeLayout {
      * 初始化界面布局
      */
     protected void initView() {
-        LayoutInflater.from(mContext).inflate(R.layout.layout_view_slide_to_unlock,
-                this, true);
+        LayoutInflater.from(mContext).inflate(R.layout.layout_view_slide_to_unlock, this, true);
 
-        rl_root = (RelativeLayout) findViewById(R.id.rl_root);
         rl_slide = (RelativeLayout) findViewById(R.id.rl_slide);
         iv_slide = (ImageView) findViewById(R.id.iv_slide);
         tv_hint = (TextView) findViewById(R.id.tv_hint);

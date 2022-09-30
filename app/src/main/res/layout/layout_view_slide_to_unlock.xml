@@ -1,38 +1,41 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rl_root"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="80dp"
+    android:background="@drawable/shape_round_normal_green">
 
     <RelativeLayout
-        android:id="@+id/rl_root"
+        android:id="@+id/rl_slide"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@drawable/shape_round_normal_green">
+        android:layout_height="80dp"
+        android:paddingStart="6dp"
+        android:paddingEnd="6dp">
 
         <RelativeLayout
-            android:id="@+id/rl_slide"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_centerVertical="true"
+            android:background="@drawable/shape_round_normal_white">
 
             <ImageView
                 android:id="@+id/iv_slide"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:scaleType="fitXY"
-                android:src="@drawable/icon_slide" />
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/svg_icon_slide" />
 
         </RelativeLayout>
 
-        <TextView
-            android:id="@+id/tv_hint"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:layout_centerVertical="true"
-            android:gravity="center"
-            android:text="滑动解锁"
-            android:textColor="@android:color/white" />
-
     </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_hint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:text="向右滑动解锁"
+        android:textColor="@android:color/white"
+        android:textSize="18sp" />
 
 </RelativeLayout>

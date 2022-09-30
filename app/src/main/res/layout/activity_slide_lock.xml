@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:chuck="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:paddingLeft="@dimen/activity_horizontal_margin"
@@ -12,20 +11,21 @@
     <RelativeLayout
         android:id="@+id/relativeLayout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_round_normal_green2">
 
         <com.example.androiddemo.ui.slidelock.CustomSlideToUnlockView
             android:id="@+id/slide_to_unlock"
             android:layout_width="match_parent"
-            android:layout_height="50dp"
-            chuck:slideImageViewResId="@drawable/icon_slide"
-            chuck:slideImageViewResIdAfter="@drawable/icon_slide"
+            android:layout_height="80dp"
+            chuck:slideImageViewResId="@drawable/svg_icon_slide"
+            chuck:slideImageViewResIdAfter="@drawable/svg_icon_slide"
             chuck:slideImageViewWidth="50dp"
             chuck:slideThreshold="0.5"
             chuck:textColorResId="@color/white"
             chuck:textHint="向右滑动解锁"
             chuck:textSize="6"
-            chuck:viewBackgroundResId="@drawable/shape_round_normal_green"/>
+            chuck:viewBackgroundResId="@drawable/shape_round_normal_green" />
 
     </RelativeLayout>
 
