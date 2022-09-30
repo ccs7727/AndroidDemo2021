@@ -13,6 +13,7 @@ import com.example.androiddemo.ui.skeleton.skeleton1.Skeleton1Activity;
 import com.example.androiddemo.ui.skeleton.skeleton2.Skeleton2Activity;
 import com.example.androiddemo.ui.skeleton.skeleton3.Skeleton3Activity;
 import com.example.androiddemo.ui.skeleton.skeleton4.Skeleton4Activity;
+import com.example.androiddemo.ui.slidelock.SlideLockActivity;
 import com.example.androiddemo.ui.zxing.QrCodeActivity;
 
 public class MainActivity extends LauncherActivity {
@@ -27,6 +28,7 @@ public class MainActivity extends LauncherActivity {
             , Skeleton3Activity.class
             , Skeleton4Activity.class
             , DateStyleActivity.class
+            , SlideLockActivity.class
     };
 
     @Override
@@ -42,6 +44,7 @@ public class MainActivity extends LauncherActivity {
                 , "骨架加载方案三"
                 , "骨架加载方案四"
                 , "自定义日期样式"
+                , "滑动解锁"
         };
 
         setListAdapter(new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, names));

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:chuck="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin">
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.example.androiddemo.ui.slidelock.CustomSlideToUnlockView
+            android:id="@+id/slide_to_unlock"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            chuck:slideImageViewResId="@drawable/icon_slide"
+            chuck:slideImageViewResIdAfter="@drawable/icon_slide"
+            chuck:slideImageViewWidth="50dp"
+            chuck:slideThreshold="0.5"
+            chuck:textColorResId="@color/white"
+            chuck:textHint="向右滑动解锁"
+            chuck:textSize="6"
+            chuck:viewBackgroundResId="@drawable/shape_round_normal_green"/>
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/relativeLayout"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="150dp"
+        android:text="reset" />
+
+    <TextView
+        android:id="@+id/tv_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/button"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="60dp"
+        android:text="slide distance:" />
+
+</RelativeLayout>
