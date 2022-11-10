@@ -48,6 +48,7 @@
         <activity android:name=".ui.skeleton.skeleton4.Skeleton4ViewActivity" />
         <activity android:name=".ui.skeleton.skeleton4.Skeleton4ViewActivity2" />
         <activity android:name=".ui.date.DateStyleActivity" />
+        <activity android:name=".ui.seekbar.SeekbarActivity" />
         <!--滑动解锁-->
         <activity android:name=".ui.slidelock.SlideLockActivity" />
     </application>

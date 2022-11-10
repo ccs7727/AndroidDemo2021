@@ -9,6 +9,7 @@ import com.example.androiddemo.ui.date.DateStyleActivity;
 import com.example.androiddemo.ui.drag.DragActivity;
 import com.example.androiddemo.ui.multilist.MultiListActivity;
 import com.example.androiddemo.ui.permission.PermisstionActivity;
+import com.example.androiddemo.ui.seekbar.SeekbarActivity;
 import com.example.androiddemo.ui.skeleton.skeleton1.Skeleton1Activity;
 import com.example.androiddemo.ui.skeleton.skeleton2.Skeleton2Activity;
 import com.example.androiddemo.ui.skeleton.skeleton3.Skeleton3Activity;
@@ -29,6 +30,7 @@ public class MainActivity extends LauncherActivity {
             , Skeleton4Activity.class
             , DateStyleActivity.class
             , SlideLockActivity.class
+            , SeekbarActivity.class
     };
 
     @Override
@@ -45,6 +47,7 @@ public class MainActivity extends LauncherActivity {
                 , "骨架加载方案四"
                 , "自定义日期样式"
                 , "滑动解锁"
+                , "垂直Seekbar"
         };
 
         setListAdapter(new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, names));
