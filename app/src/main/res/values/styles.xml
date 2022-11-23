@@ -40,4 +40,8 @@
         <attr name="ringColor" format="color" />
     </declare-styleable>
 
+    <style name="OnClick">
+        <item name="android:onClick">onClick</item>
+        <item name="android:clickable">true</item>
+    </style>
 </resources>

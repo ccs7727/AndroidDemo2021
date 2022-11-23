@@ -51,6 +51,8 @@
         <activity android:name=".ui.seekbar.SeekbarActivity" />
         <!--滑动解锁-->
         <activity android:name=".ui.slidelock.SlideLockActivity" />
+        <!--路线规划-->
+        <activity android:name=".ui.map.MapActivity" />
     </application>
 
 </manifest>
