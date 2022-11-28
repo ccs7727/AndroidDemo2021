@@ -7,6 +7,7 @@ import android.widget.ArrayAdapter;
 
 import com.example.androiddemo.ui.date.DateStyleActivity;
 import com.example.androiddemo.ui.drag.DragActivity;
+import com.example.androiddemo.ui.list.RecyclerViewListActivity;
 import com.example.androiddemo.ui.map.MapActivity;
 import com.example.androiddemo.ui.multilist.MultiListActivity;
 import com.example.androiddemo.ui.permission.PermisstionActivity;
@@ -32,7 +33,7 @@ public class MainActivity extends LauncherActivity {
             , DateStyleActivity.class
             , SlideLockActivity.class
             , SeekbarActivity.class
-            , MapActivity.class
+            , RecyclerViewListActivity.class
     };
 
     @Override
@@ -50,7 +51,7 @@ public class MainActivity extends LauncherActivity {
                 , "自定义日期样式"
                 , "滑动解锁"
                 , "SeekBar与天地图实现地图比例缩放"
-                , "路线规划"
+                , "RecyclerView横向滚动"
         };
 
         setListAdapter(new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, names));

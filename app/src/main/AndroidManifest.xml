@@ -53,6 +53,7 @@
         <activity android:name=".ui.slidelock.SlideLockActivity" />
         <!--路线规划-->
         <activity android:name=".ui.map.MapActivity" />
+        <activity android:name=".ui.list.RecyclerViewListActivity" />
     </application>
 
 </manifest>

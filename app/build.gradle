@@ -44,6 +44,9 @@ android {
     buildFeatures {
         viewBinding true
     }
+    buildFeatures {
+        dataBinding = true
+    }
 }
 
 dependencies {
@@ -72,5 +75,6 @@ dependencies {
     //滑动解锁
     implementation 'com.github.florent37:viewanimator:1.0.0@aar'
     implementation 'com.nineoldandroids:library:2.4.0'
+    implementation 'com.github.CymChad:BaseRecyclerViewAdapterHelper:3.0.4'
 
 }

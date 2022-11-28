@@ -13,4 +13,14 @@
     <string name="user_1_statement">When you\'re pushed, build breaking\'s as easy as breathing</string>
     <string name="user_2_name">Phyllis Willis</string>
     <string name="user_2_statement">Wrong girl in the wrong program at the wrong line</string>
+    <string-array name="right_title_name">
+        <item>最新价</item>
+        <item>涨幅</item>
+        <item>成交量</item>
+        <item>最高</item>
+        <item>最低</item>
+        <item>买一</item>
+        <item>卖一</item>
+        <item>量比</item>
+    </string-array>
 </resources>
