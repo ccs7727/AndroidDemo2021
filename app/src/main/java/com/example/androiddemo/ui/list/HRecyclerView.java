@@ -48,8 +48,10 @@ public class HRecyclerView extends RelativeLayout {
     private Context context;
     //右边可滑动的总宽度
     private int mRightTotalWidth = 0;
-    //右边单个view的宽度
-    private int mRightItemWidth = 60;
+    //右边单个view一个字的宽度
+    private int mRightItemWidth = 15;
+    //左右宽度
+    private int mLeftRightItemWidth = 30;
     //左边view的宽度
     private int mLeftViewWidth = 60;
     //左边view的高度
@@ -241,11 +243,12 @@ public class HRecyclerView extends RelativeLayout {
     public void setHeaderListData(String[] headerListData) {
         mRightTitleList = headerListData;
         mRightTitleWidthList = new int[headerListData.length];
+        String[] ss = getResources().getStringArray(R.array.right_title_name);
         for (int i = 0; i < headerListData.length; i++) {
-            mRightTitleWidthList[i] = dip2px(context, mRightItemWidth);
+            mRightTitleWidthList[i] = dip2px(context, ss[i].length() * mRightItemWidth + mLeftRightItemWidth);
         }
         mLeftTextWidthList = new int[]{dip2px(context, mLeftViewWidth)};
-        mLeftTextList = new String[]{"名称"};
+        mLeftTextList = new String[]{"名次"};
     }
 
     public static int dip2px(Context context, float dpValue) {
