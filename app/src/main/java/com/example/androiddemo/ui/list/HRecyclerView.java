@@ -6,6 +6,7 @@ import android.view.Gravity;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.FrameLayout;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
@@ -50,7 +51,7 @@ public class HRecyclerView extends RelativeLayout {
     //右边单个view的宽度
     private int mRightItemWidth = 60;
     //左边view的宽度
-    private int mLeftViewWidth = 80;
+    private int mLeftViewWidth = 60;
     //左边view的高度
     private int mLeftViewHeight = 40;
     //触发拦截手势的最小值
@@ -76,7 +77,6 @@ public class HRecyclerView extends RelativeLayout {
         linearLayout.addView(createMoveRecyclerView());
         addView(linearLayout, new LayoutParams(LayoutParams.MATCH_PARENT,
                 ViewGroup.LayoutParams.MATCH_PARENT));
-
     }
 
     /**
@@ -87,16 +87,25 @@ public class HRecyclerView extends RelativeLayout {
     private View createHeadLayout() {
         LinearLayout headLayout = new LinearLayout(getContext());
         headLayout.setGravity(Gravity.CENTER);
+        headLayout.setBackgroundColor(getResources().getColor(R.color.c_F4F8F9));
         LinearLayout leftLayout = new LinearLayout(getContext());
         addListHeaderTextView(mLeftTextList[0], mLeftTextWidthList[0], leftLayout);
+        addListHeaderLineView(leftLayout);
         leftLayout.setGravity(Gravity.CENTER);
-        headLayout.addView(leftLayout, 0, new ViewGroup.LayoutParams(dip2px(context, mLeftViewWidth), dip2px(context, mLeftViewHeight)));
+        headLayout.addView(leftLayout, 0, new ViewGroup.LayoutParams(dip2px(context, mLeftViewWidth) + 1, dip2px(context, mLeftViewHeight)));
 
         mRightTitleLayout = new LinearLayout(getContext());
         for (int i = 0; i < mRightTitleList.length; i++) {
             addListHeaderTextView(mRightTitleList[i], mRightTitleWidthList[i], mRightTitleLayout);
+            if (i != mRightTitleList.length - 1) {
+                addListHeaderLineView(mRightTitleLayout);
+            }
         }
         headLayout.addView(mRightTitleLayout);
+
+        MarginLayoutParams params = new MarginLayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.WRAP_CONTENT);
+        params.setMargins(1, 1, 1, 0);//left,top,right,bottom
+        headLayout.setLayoutParams(params);
         return headLayout;
     }
 
@@ -146,7 +155,14 @@ public class HRecyclerView extends RelativeLayout {
         textView.setText(headerName);
         textView.setGravity(Gravity.CENTER);
         textView.setTextColor(getResources().getColor(R.color.c_303133));
-        leftLayout.addView(textView, width, dip2px(context, 55));
+        leftLayout.addView(textView, width, dip2px(context, mLeftViewHeight));
+        return textView;
+    }
+
+    private View addListHeaderLineView(LinearLayout leftLayout) {
+        View textView = new View(getContext());
+        textView.setBackgroundColor(getResources().getColor(R.color.c_e5e5e5));
+        leftLayout.addView(textView, 1, dip2px(context, mLeftViewHeight));
         return textView;
     }
 

@@ -1,10 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:padding="11dp">
 
-    <com.example.androiddemo.ui.list.HRecyclerView
-        android:id="@+id/id_hrecyclerview"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"
+        android:background="@drawable/shape_white_10"
+        android:orientation="vertical"
+        android:padding="@dimen/dp_10">
+
+        <com.example.androiddemo.ui.list.HRecyclerView
+            android:id="@+id/id_hrecyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/shape_gray_r" />
+    </LinearLayout>
+
 </LinearLayout>
