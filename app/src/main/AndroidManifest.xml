@@ -54,6 +54,7 @@
         <!--路线规划-->
         <activity android:name=".ui.map.MapActivity" />
         <activity android:name=".ui.list.RecyclerViewListActivity" />
+        <activity android:name=".ui.coordinatorLayout.CoordinatorLayoutTestActivity" />
     </application>
 
 </manifest>
