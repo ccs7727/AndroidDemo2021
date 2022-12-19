@@ -9,7 +9,6 @@ import com.example.androiddemo.ui.coordinatorLayout.CoordinatorLayoutTestActivit
 import com.example.androiddemo.ui.date.DateStyleActivity;
 import com.example.androiddemo.ui.drag.DragActivity;
 import com.example.androiddemo.ui.list.RecyclerViewListActivity;
-import com.example.androiddemo.ui.map.MapActivity;
 import com.example.androiddemo.ui.multilist.MultiListActivity;
 import com.example.androiddemo.ui.permission.PermisstionActivity;
 import com.example.androiddemo.ui.seekbar.SeekbarActivity;
@@ -31,11 +30,11 @@ public class MainActivity extends LauncherActivity {
             , Skeleton2Activity.class
             , Skeleton3Activity.class
             , Skeleton4Activity.class
-            , DateStyleActivity.class
             , SlideLockActivity.class
             , SeekbarActivity.class
             , RecyclerViewListActivity.class
             , CoordinatorLayoutTestActivity.class
+            , DateStyleActivity.class
     };
 
     @Override
@@ -50,11 +49,11 @@ public class MainActivity extends LauncherActivity {
                 , "骨架加载方案二"
                 , "骨架加载方案三"
                 , "骨架加载方案四"
-                , "自定义日期样式"
                 , "滑动解锁"
                 , "SeekBar与天地图实现地图比例缩放"
                 , "RecyclerView横向滚动"
                 , "滑动悬停"
+                , "自定义年月、年左右选择控件"
         };
 
         setListAdapter(new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, names));
