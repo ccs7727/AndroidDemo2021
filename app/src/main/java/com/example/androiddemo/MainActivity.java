@@ -17,6 +17,7 @@ import com.example.androiddemo.ui.skeleton.skeleton2.Skeleton2Activity;
 import com.example.androiddemo.ui.skeleton.skeleton3.Skeleton3Activity;
 import com.example.androiddemo.ui.skeleton.skeleton4.Skeleton4Activity;
 import com.example.androiddemo.ui.slidelock.SlideLockActivity;
+import com.example.androiddemo.ui.slidelock2.SlideLockActivity2;
 import com.example.androiddemo.ui.zxing.QrCodeActivity;
 
 public class MainActivity extends LauncherActivity {
@@ -35,6 +36,7 @@ public class MainActivity extends LauncherActivity {
             , RecyclerViewListActivity.class
             , CoordinatorLayoutTestActivity.class
             , DateStyleActivity.class
+            , SlideLockActivity2.class
     };
 
     @Override
@@ -54,6 +56,7 @@ public class MainActivity extends LauncherActivity {
                 , "RecyclerView横向滚动"
                 , "滑动悬停"
                 , "自定义年月、年左右选择控件"
+                , "滑动解锁2"
         };
 
         setListAdapter(new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, names));
