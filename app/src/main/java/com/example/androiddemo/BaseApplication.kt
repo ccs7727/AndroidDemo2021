@@ -12,7 +12,7 @@ class BaseApplication : Application() {
     override fun onCreate() {
         super.onCreate()
         //APP保活
-        setKeepLive()
+//        setKeepLive()
     }
 
     //APP保活

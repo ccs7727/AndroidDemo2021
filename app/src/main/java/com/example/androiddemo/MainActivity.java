@@ -5,10 +5,12 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.widget.ArrayAdapter;
 
+import com.example.androiddemo.glide.GlideActivity;
 import com.example.androiddemo.ui.coordinatorLayout.CoordinatorLayoutTestActivity;
 import com.example.androiddemo.ui.date.DateStyleActivity;
 import com.example.androiddemo.ui.drag.DragActivity;
 import com.example.androiddemo.ui.list.RecyclerViewListActivity;
+import com.example.androiddemo.ui.multicolor.MultiColorSeekbarActivity;
 import com.example.androiddemo.ui.multilist.MultiListActivity;
 import com.example.androiddemo.ui.permission.PermisstionActivity;
 import com.example.androiddemo.ui.seekbar.SeekbarActivity;
@@ -18,6 +20,7 @@ import com.example.androiddemo.ui.skeleton.skeleton3.Skeleton3Activity;
 import com.example.androiddemo.ui.skeleton.skeleton4.Skeleton4Activity;
 import com.example.androiddemo.ui.slidelock.SlideLockActivity;
 import com.example.androiddemo.ui.slidelock2.SlideLockActivity2;
+import com.example.androiddemo.ui.touchsign.TouchSingleActivity;
 import com.example.androiddemo.ui.zxing.QrCodeActivity;
 
 public class MainActivity extends LauncherActivity {
@@ -26,17 +29,12 @@ public class MainActivity extends LauncherActivity {
             QrCodeActivity.class
             , DragActivity.class
             , MultiListActivity.class
-            , PermisstionActivity.class
-            , Skeleton1Activity.class
-            , Skeleton2Activity.class
-            , Skeleton3Activity.class
-            , Skeleton4Activity.class
-            , SlideLockActivity.class
-            , SeekbarActivity.class
             , RecyclerViewListActivity.class
             , CoordinatorLayoutTestActivity.class
             , DateStyleActivity.class
             , SlideLockActivity2.class
+            , MultiColorSeekbarActivity.class
+            , TouchSingleActivity.class
     };
 
     @Override
@@ -46,17 +44,12 @@ public class MainActivity extends LauncherActivity {
                 "扫描二维码"
                 , "拖动调整应用位置与排序"
                 , "多级列表"
-                , "权限设置"
-                , "骨架加载方案一"
-                , "骨架加载方案二"
-                , "骨架加载方案三"
-                , "骨架加载方案四"
-                , "滑动解锁"
-                , "SeekBar与天地图实现地图比例缩放"
                 , "RecyclerView横向滚动"
                 , "滑动悬停"
                 , "自定义年月、年左右选择控件"
-                , "滑动解锁2"
+                , "滑动解锁"
+                , "多色横向进度条"
+                , "手写电子签名"
         };
 
         setListAdapter(new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, names));

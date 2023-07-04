@@ -50,6 +50,7 @@
         <activity android:name=".ui.skeleton.skeleton4.Skeleton4ViewActivity2" />
         <activity android:name=".ui.date.DateStyleActivity" />
         <activity android:name=".ui.seekbar.SeekbarActivity" />
+        <activity android:name=".ui.multicolor.MultiColorSeekbarActivity" />
         <!--滑动解锁-->
         <activity android:name=".ui.slidelock.SlideLockActivity" />
         <!--路线规划-->
@@ -57,6 +58,8 @@
         <activity android:name=".ui.list.RecyclerViewListActivity" />
         <activity android:name=".ui.coordinatorLayout.CoordinatorLayoutTestActivity" />
         <activity android:name=".ui.slidelock2.SlideLockActivity2" />
+        <activity android:name=".glide.GlideActivity" />
+        <activity android:name=".ui.touchsign.TouchSingleActivity" />
     </application>
 
 </manifest>

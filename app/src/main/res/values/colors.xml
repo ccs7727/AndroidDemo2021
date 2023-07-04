@@ -49,5 +49,13 @@
     <color name="sign_green">#000000</color>
     <!--周-背景色-->
     <color name="sign_white">#FFFFFF</color>
-    <color name="sign_week_bg_color"> #F5F7F6</color>
+    <color name="sign_week_bg_color">#F5F7F6</color>
+    <color name="multi_color_blue">#2976FF</color>
+    <color name="multi_color_blue2">#A02976FF</color>
+    <color name="multi_color_yellow">#F3CD46</color>
+    <color name="multi_color_yellow2">#A0F3CD46</color>
+    <color name="multi_color_origin">#EE9938</color>
+    <color name="multi_color_origin2">#A0EE9938</color>
+    <color name="multi_color_red">#E74D3E</color>
+    <color name="multi_color_red2">#A0E74D3E</color>
 </resources>
