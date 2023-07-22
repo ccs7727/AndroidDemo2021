@@ -21,6 +21,7 @@ import com.example.androiddemo.ui.skeleton.skeleton4.Skeleton4Activity;
 import com.example.androiddemo.ui.slidelock.SlideLockActivity;
 import com.example.androiddemo.ui.slidelock2.SlideLockActivity2;
 import com.example.androiddemo.ui.touchsign.TouchSingleActivity;
+import com.example.androiddemo.ui.watermark.WaterMarkActivity;
 import com.example.androiddemo.ui.zxing.QrCodeActivity;
 
 public class MainActivity extends LauncherActivity {
@@ -35,6 +36,7 @@ public class MainActivity extends LauncherActivity {
             , SlideLockActivity2.class
             , MultiColorSeekbarActivity.class
             , TouchSingleActivity.class
+            , WaterMarkActivity.class
     };
 
     @Override
@@ -50,6 +52,7 @@ public class MainActivity extends LauncherActivity {
                 , "滑动解锁"
                 , "多色横向进度条"
                 , "手写电子签名"
+                , "图片添加水印"
         };
 
         setListAdapter(new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, names));

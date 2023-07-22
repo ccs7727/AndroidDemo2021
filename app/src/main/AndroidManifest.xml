@@ -60,6 +60,7 @@
         <activity android:name=".ui.slidelock2.SlideLockActivity2" />
         <activity android:name=".glide.GlideActivity" />
         <activity android:name=".ui.touchsign.TouchSingleActivity" />
+        <activity android:name=".ui.watermark.WaterMarkActivity" />
     </application>
 
 </manifest>
