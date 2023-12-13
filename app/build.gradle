@@ -78,5 +78,6 @@ dependencies {
     implementation 'com.github.CymChad:BaseRecyclerViewAdapterHelper:3.0.4'
     implementation 'com.fanjun:keeplive:1.1.22'
     implementation 'com.github.bumptech.glide:glide:4.11.0'
+    implementation 'com.airbnb.android:lottie:6.0.1'
 
 }

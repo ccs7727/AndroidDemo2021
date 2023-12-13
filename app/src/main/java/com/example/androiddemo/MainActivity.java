@@ -10,6 +10,7 @@ import com.example.androiddemo.ui.coordinatorLayout.CoordinatorLayoutTestActivit
 import com.example.androiddemo.ui.date.DateStyleActivity;
 import com.example.androiddemo.ui.drag.DragActivity;
 import com.example.androiddemo.ui.list.RecyclerViewListActivity;
+import com.example.androiddemo.ui.lottie.LottieAnimActivity;
 import com.example.androiddemo.ui.multicolor.MultiColorSeekbarActivity;
 import com.example.androiddemo.ui.multilist.MultiListActivity;
 import com.example.androiddemo.ui.permission.PermisstionActivity;
@@ -37,6 +38,7 @@ public class MainActivity extends LauncherActivity {
             , MultiColorSeekbarActivity.class
             , TouchSingleActivity.class
             , WaterMarkActivity.class
+            , LottieAnimActivity.class
     };
 
     @Override
@@ -53,6 +55,7 @@ public class MainActivity extends LauncherActivity {
                 , "多色横向进度条"
                 , "手写电子签名"
                 , "图片添加水印"
+                , "Lottie加载json动画"
         };
 
         setListAdapter(new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, names));
