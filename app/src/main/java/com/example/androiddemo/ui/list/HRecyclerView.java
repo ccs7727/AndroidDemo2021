@@ -240,18 +240,17 @@ public class HRecyclerView extends RelativeLayout {
      *
      * @param headerListData
      */
-    public void setHeaderListData(String[] headerListData) {
+    public void setHeaderListData(String leftTitle, String[] headerListData) {
         mRightTitleList = headerListData;
         mRightTitleWidthList = new int[headerListData.length];
-        String[] ss = getResources().getStringArray(R.array.right_title_name);
         for (int i = 0; i < headerListData.length; i++) {
-            mRightTitleWidthList[i] = dip2px(context, ss[i].length() * mRightItemWidth + mLeftRightItemWidth);
+            mRightTitleWidthList[i] = dip2px(context, headerListData[i].length() * mRightItemWidth + mLeftRightItemWidth);
         }
         mLeftTextWidthList = new int[]{dip2px(context, mLeftViewWidth)};
-        mLeftTextList = new String[]{"名次"};
+        mLeftTextList = new String[]{leftTitle};
     }
 
-    public static int dip2px(Context context, float dpValue) {
+    private static int dip2px(Context context, float dpValue) {
         final float scale = context.getResources().getDisplayMetrics().density;
         return (int) (dpValue * scale + 0.5f);
     }

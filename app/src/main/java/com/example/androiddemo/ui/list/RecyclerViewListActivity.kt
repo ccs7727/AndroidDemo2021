@@ -33,7 +33,7 @@ class RecyclerViewListActivity : AppCompatActivity() {
             mDataModels!!.add(coinInfo)
         }
 
-        hRecyclerView?.setHeaderListData(resources.getStringArray(R.array.right_title_name))
+        hRecyclerView?.setHeaderListData("名次", resources.getStringArray(R.array.right_title_name))
 
         val adapter = CoinAdapter(this, mDataModels, R.layout.item_layout, object : CommonViewHolder.onItemCommonClickListener {
             override fun onItemClickListener(position: Int) {
@@ -43,6 +43,6 @@ class RecyclerViewListActivity : AppCompatActivity() {
             override fun onItemLongClickListener(position: Int) {}
         })
 
-        hRecyclerView!!.setAdapter(adapter)
+        hRecyclerView?.setAdapter(adapter)
     }
 }
