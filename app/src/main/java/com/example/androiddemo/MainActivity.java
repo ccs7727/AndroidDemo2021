@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.widget.ArrayAdapter;
 
 import com.example.androiddemo.glide.GlideActivity;
+import com.example.androiddemo.ui.calendar.CalenderDemoActivity;
 import com.example.androiddemo.ui.coordinatorLayout.CoordinatorLayoutTestActivity;
 import com.example.androiddemo.ui.date.DateStyleActivity;
 import com.example.androiddemo.ui.drag.DragActivity;
@@ -39,6 +40,7 @@ public class MainActivity extends LauncherActivity {
             , TouchSingleActivity.class
             , WaterMarkActivity.class
             , LottieAnimActivity.class
+            , CalenderDemoActivity.class
     };
 
     @Override
@@ -56,6 +58,7 @@ public class MainActivity extends LauncherActivity {
                 , "手写电子签名"
                 , "图片添加水印"
                 , "Lottie加载json动画"
+                , "创建系统日历提醒"
         };
 
         setListAdapter(new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, names));

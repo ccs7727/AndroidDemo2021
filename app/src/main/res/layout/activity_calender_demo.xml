@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+
+    <Button
+        android:id="@+id/getEventId"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="重置事件ID" />
+
+    <Button
+        android:id="@+id/deleteEventButton"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="delete a Event" />
+
+    <Button
+        android:id="@+id/writeEventButton"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Input a Event" />
+
+    <Button
+        android:id="@+id/getEventId2"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="重置事件ID" />
+
+    <Button
+        android:id="@+id/deleteEventButton2"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="delete a Event" />
+
+    <Button
+        android:id="@+id/writeEventButton2"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Input a Event" />
+
+</LinearLayout>

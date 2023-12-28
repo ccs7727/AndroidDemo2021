@@ -2,6 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.androiddemo">
 
+    <uses-permission android:name="android.permission.READ_CALENDAR" />
+    <uses-permission android:name="android.permission.WRITE_CALENDAR" />
+
     <application
         android:name=".BaseApplication"
         android:allowBackup="true"
@@ -62,6 +65,7 @@
         <activity android:name=".ui.touchsign.TouchSingleActivity" />
         <activity android:name=".ui.watermark.WaterMarkActivity" />
         <activity android:name=".ui.lottie.LottieAnimActivity" />
+        <activity android:name=".ui.calendar.CalenderDemoActivity" />
     </application>
 
 </manifest>
