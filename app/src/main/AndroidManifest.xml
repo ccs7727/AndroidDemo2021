@@ -68,13 +68,6 @@
         <activity android:name=".ui.lottie.LottieAnimActivity" />
         <activity android:name=".ui.calendar.CalenderDemoActivity" />
 
-        <receiver android:name="com.example.androiddemo.ui.alarmmanager.util.LoongggAlarmReceiver">
-            <intent-filter>
-                <action android:name="com.loonggg.alarm.clock" />
-            </intent-filter>
-        </receiver>
-
-        <activity android:name=".ui.alarmmanager.util.ClockAlarmActivity" />
         <activity android:name=".ui.alarmmanager.AlarmManagerActivity" />
     </application>
 

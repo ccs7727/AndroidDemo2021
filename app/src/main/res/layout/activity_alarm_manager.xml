@@ -11,9 +11,9 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:gravity="center"
+        android:hint="选择时间"
         android:paddingTop="8dp"
-        android:paddingBottom="8dp"
-        android:text="选择时间" />
+        android:paddingBottom="8dp" />
 
     <Button
         android:id="@+id/set_btn"
@@ -29,6 +29,6 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="20dp"
-        android:text="重置" />
+        android:text="新增" />
 
 </LinearLayout>
