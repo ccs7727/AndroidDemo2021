@@ -27,10 +27,10 @@ import java.util.Calendar;
  * 定时提醒
  */
 public class AlarmManagerActivity extends AppCompatActivity implements View.OnClickListener {
-    private TextView date_tv;
-    private Button set_btn, reset_btn;
+    private TextView date_tv, index_tv;
+    private Button reset_btn, cancel_btn;
     private String time;
-    private int ring = 1;
+    private int ring = 2;
     private MediaPlayer mediaPlayer;
     private Vibrator vibrator;
     private int index = 0;
@@ -39,19 +39,13 @@ public class AlarmManagerActivity extends AppCompatActivity implements View.OnCl
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_alarm_manager);
-        set_btn = findViewById(R.id.set_btn);
-        set_btn.setOnClickListener(this);
         reset_btn = findViewById(R.id.reset_btn);
         reset_btn.setOnClickListener(this);
+        cancel_btn = findViewById(R.id.cancel_btn);
+        cancel_btn.setOnClickListener(this);
         date_tv = findViewById(R.id.date_tv);
-        initTime();
+        index_tv = findViewById(R.id.index_tv);
         ReceiverUtils.registerReceiver(this, receiver, new IntentFilter(AlarmManagerUtil.ALARM_ACTION));
-    }
-
-    @Override
-    protected void onDestroy() {
-        super.onDestroy();
-        ReceiverUtils.unregisterReceiver(this, receiver);
     }
 
     private final BroadcastReceiver receiver = new BroadcastReceiver() {
@@ -69,7 +63,7 @@ public class AlarmManagerActivity extends AppCompatActivity implements View.OnCl
         Calendar calendar = Calendar.getInstance();
         int hour = calendar.get(Calendar.HOUR_OF_DAY);
         int minute = (calendar.get(Calendar.MINUTE) + index);
-        time = hour < 10 ? ("0" + hour) : hour + ":" + (minute < 10 ? ("0" + minute) : minute);
+        time = (hour < 10 ? ("0" + hour) : hour) + ":" + (minute < 10 ? ("0" + minute) : minute);
         if (TextUtils.isEmpty(date_tv.getText().toString())) {
             date_tv.setText(time);
         } else {
@@ -80,39 +74,56 @@ public class AlarmManagerActivity extends AppCompatActivity implements View.OnCl
     @Override
     public void onClick(View view) {
         switch (view.getId()) {
-            case R.id.set_btn:
-                setClock();
-                break;
-            case R.id.reset_btn:
+            case R.id.reset_btn://新增
                 index++;
                 initTime();
                 setClock();
+                index_tv.setText("" + index);
+                break;
+            case R.id.cancel_btn://取消
+                AlarmManagerUtil.cancelAlarm(this, index);
+                if (index > 1) {
+                    index--;
+                    index_tv.setText("" + index);
+                    date_tv.setText(date_tv.getText().toString().substring(0, date_tv.getText().toString().lastIndexOf(",")));
+                }
                 break;
         }
     }
 
     private void setClock() {
-        int id = (int) (Math.round(Math.random() * 9999) + 1);
         if (time != null && time.length() > 0) {
             String[] times = time.split(":");
-            AlarmManagerUtil.setAlarm(this, Integer.parseInt(times[0]), Integer.parseInt
-                    (times[1]), id, 0, "闹钟响了-demo-" + index, ring);
-            Toast.makeText(this, "闹钟设置成功", Toast.LENGTH_LONG).show();
+            Calendar calendar = Calendar.getInstance();
+            AlarmManagerUtil.setAlarm(this,
+                    calendar.get(Calendar.YEAR),
+                    calendar.get(Calendar.MONTH),
+                    calendar.get(Calendar.DAY_OF_MONTH),
+                    Integer.parseInt(times[0]),
+                    Integer.parseInt(times[1]),
+                    index, "闹钟响了-demo-" + index, ring);
         }
     }
 
-
     private void showDialogInBroadcastReceiver(String message, final int flag) {
         if (flag == 1 || flag == 2) {
-            mediaPlayer = MediaPlayer.create(this, R.raw.in_call_alarm);
-            mediaPlayer.setLooping(true);
+            if (mediaPlayer == null) {
+                mediaPlayer = MediaPlayer.create(this, R.raw.in_call_alarm);
+                mediaPlayer.setLooping(true);
+            }
+            if (mediaPlayer.isPlaying()) {
+                mediaPlayer.pause();
+            }
             mediaPlayer.start();
         }
         //数组参数意义：第一个参数为等待指定时间后开始震动，震动时间为第二个参数。后边的参数依次为等待震动和震动的时间
         //第二个参数为重复次数，-1为不重复，0为一直震动
         if (flag == 0 || flag == 2) {
+            if (vibrator != null && vibrator.hasVibrator()) {
+                vibrator.cancel();
+            }
             vibrator = (Vibrator) this.getSystemService(Service.VIBRATOR_SERVICE);
-            vibrator.vibrate(new long[]{100, 10, 100, 600}, 0);
+            vibrator.vibrate(new long[]{0, 1000, 1000, 1000}, 0);
         }
 
         final SimpleDialog dialog = new SimpleDialog(this, R.style.Theme_dialog);
@@ -122,8 +133,7 @@ public class AlarmManagerActivity extends AppCompatActivity implements View.OnCl
         dialog.setClickListener(v -> {
             if (dialog.bt_confirm == v || dialog.bt_cancel == v) {
                 if (flag == 1 || flag == 2) {
-                    mediaPlayer.stop();
-                    mediaPlayer.release();
+                    mediaPlayer.pause();
                 }
                 if (flag == 0 || flag == 2) {
                     vibrator.cancel();
@@ -133,4 +143,19 @@ public class AlarmManagerActivity extends AppCompatActivity implements View.OnCl
         });
     }
 
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        ReceiverUtils.unregisterReceiver(this, receiver);
+        if (null != mediaPlayer) {
+            mediaPlayer.release();
+            mediaPlayer = null;
+        }
+        if (vibrator != null) {
+            if (vibrator.hasVibrator()) {
+                vibrator.cancel();
+            }
+            vibrator = null;
+        }
+    }
 }
